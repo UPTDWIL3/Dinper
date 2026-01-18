@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>beranda</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("/foto/home.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+
+/* LOGO & NAMA */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    width: 45px;
+}
+
+.brand span {
+    font-weight: bold; /* TEKS BOLD */
+    font-size: 18px;
+}
+
+/* LOGIN BUTTON */
+.logout-btn {
+    background: #ef4444;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #ef4444;
+}
+
+/* NAVIGASI TENGAH */
+.nav-center {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-center a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-center a:hover {
+    text-decoration: underline;
+}
+
+/* KONTEN UTAMA */
+.main-content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+}
+
+.main-content h1 {
+    font-size: 32px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="brand">
+        <img src="/foto/logo.png">
+        <span>UPTD PSDA WIL III</span>
+    </div>
+
+    <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+</div>
+
+<div class="nav-center">
+    <a href="index2.html">Beranda</a>
+    <a href="tentang2.html">Tentang</a>
+    <a href="kontak2.html">Kontak</a>
+    <a href="database.html">Data</a>
+</div>
+
+<div class="main-content">
+    <div>
+        <h1>SELAMAT DATANG DI WEBSITE DATABASE 
+            UPTD PSDA WIL III</h1>
+        <p>Mengelola data pegawai perairan dengan cepat dan akurat</p>
+    </div>
+</div>
+
+</body>
+</html>

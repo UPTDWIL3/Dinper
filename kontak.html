@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kontak</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("/foto/kontak.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.7);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand img { width: 45px; }
+.brand span { font-weight: bold; font-size: 18px; }
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-center a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-btn {
+    background: #0d6efd;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* KONTEN */
+.contact-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+}
+
+.contact-box {
+    background: rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 380px;
+    text-align: center;
+}
+
+/* FORM */
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact-box button {
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="brand">
+        <img src="/foto/logo.png">
+        <span>UPTD PSDA WIL III</span>
+    </div>
+
+    <div class="nav-center">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+    </div>
+
+    <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
+</div>
+
+<div class="contact-section">
+    <div class="contact-box">
+
+        <h2>Hubungi Kami</h2>
+
+        <br>
+
+        <form onsubmit="kirimWA(event)">
+            <input type="text" id="nama" placeholder="Nama Anda" required><br><br>
+            <input type="email" id="email" placeholder="Email Anda" required><br><br>
+            <textarea id="pesan" placeholder="Tulis pesan..." rows="4" required></textarea><br><br>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <p>
+            📍 <a href="https://maps.google.com/?cid=1921758596214956153&entry=gps" target="_blank" style="color:#00c6ff; font-weight:bold;">
+                Klik untuk melihat lokasi di Google Maps
+            </a>
+            </p>
+        <p>📧 personilwil3@mail.com</p>
+        <p>📞 0895-6098-09392</p>
+    </div>
+</div>
+
+<script>
+function kirimWA(e){
+    e.preventDefault();
+
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+    let pesan = document.getElementById("pesan").value;
+
+    let text = `Halo Admin Dinas Perairan,%0A
+Nama: ${nama}%0AEmail: ${email}%0APesan: ${pesan}`;
+
+    window.open("https://wa.me/62895609809392?text=" + text, "_blank");
+}
+</script>
+
+</body>
+</html>

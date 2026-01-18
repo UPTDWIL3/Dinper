@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<style>
+body {
+    background: url("/foto/login.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-box {
+    background: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.header-logo img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.header-logo h3 {
+    margin: 0;
+    color: #000000;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: #0d6efd;
+}
+
+.login-btn:hover {
+    background: #0b5ed7;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    margin-top: 8px;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+
+    <div class="header-logo">
+        <img src="/foto/logo.png" alt="Logo">
+        <h3>Silahkan login sebelum mengakses</h3>
+    </div>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="login-btn" onclick="login()">Login</button>
+    <button class="cancel-btn" onclick="batal()">Batal</button>
+
+    <div class="error" id="error"></div>
+
+</div>
+
+<script>
+function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    if(user === "admin" && pass === "12345") {
+        alert("Login berhasil");
+        window.location.href = "database.html";
+    } else {
+        document.getElementById("error").innerText = "Username atau Password salah!";
+    }
+}
+
+function batal() {
+    window.location.href = "index.html"; // arahkan ke halaman beranda
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Tentang</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("/foto/tentang.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.6);
+}
+
+/* LOGO */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img { width: 45px; }
+.brand span { font-weight: bold; font-size: 18px; }
+
+/* NAVIGASI TENGAH */
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-center a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-center a:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN */
+.logout-btn {
+    background: #ef4444;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CONTENT */
+.about-top {
+    padding: 80px 20px 40px;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+}
+
+.gallery-section {
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.5);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+
+    <div class="brand">
+        <img src="/foto/logo.png">
+        <span>UPTD PSDA WIL III</span>
+    </div>
+
+    <div class="nav-center">
+        <a href="index2.html">Beranda</a>
+        <a href="tentang2.html">Tentang</a>
+        <a href="kontak2.html">Kontak</a>
+        <a href="database.html">Data</a>
+    </div>
+
+    <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+
+</div>
+
+<div class="about-top">
+    <h1>TENTANG UPTD PSDA WIL III</h1>
+    <p>
+        Mengelola, melindungi, dan mengembangkan sumber daya perairan demi keberlanjutan lingkungan dan kesejahteraan masyarakat.
+    <P> Dinas Perairan merupakan lembaga pemerintah yang berperan penting dalam pengelolaan dan pengawasan sumber daya air, 
+        <p> perairan, serta ekosistem kelautan dan perikanan.
+    </P>
+    <h1>SEJARAH DINAS PERAIRAN</h1>
+    <P>UPTD Sumber Daya Air (Unit Pelaksana Teknis Daerah) dibentuk sebagai perpanjangan tangan Dinas yang membidangi sumber daya air di tingkat wilayah. Keberadaan UPTD ini bertujuan untuk mendekatkan pelayanan pemerintah kepada masyarakat, khususnya dalam pengelolaan, pemeliharaan, dan pengembangan infrastruktur sumber daya air seperti sungai, bendung, saluran irigasi, serta bangunan pengairan lainnya.</P>
+    <P>Pembentukan UPTD Sumber Daya Air dilatarbelakangi oleh kebutuhan akan pengelolaan air yang lebih efektif, terarah, dan berkelanjutan. Seiring meningkatnya kebutuhan air untuk pertanian, pemukiman, industri, serta pengendalian bencana seperti banjir dan longsor, pemerintah daerah memandang perlu adanya unit teknis yang fokus bekerja di wilayah tertentu.
+        <P>UPTD Sumber Daya Air mulai beroperasi berdasarkan peraturan daerah dan peraturan kepala daerah yang mengatur struktur organisasi dan tata kerja perangkat daerah.</P>
+    </P>
+    <h1>VISI</h1>
+    <p>Terwujudnya infrastruktur bidang pengairan yang aman, mantap, indah, nyaman dan efisien (AMINE)
+        <P>untuk mendukung Lampung menjadi Provinsi unggulan dan berdaya saing di Indonesia.
+    </p>
+    <h1>MISI</h1>
+
+   <P> 1. Meningkatkan pelestarian lingkingan sumber daya air secara menyeluruh konsisten 
+    <P>dan berkelanjutan
+
+   <P> 2. Meningkatkan pengelolaan jaringan irigasi dan untuk menunjang sektor pertanian.
+
+   <P> 3. Meningkatkan pengelolaan sumber daya air untuk menunjang sektor strategis lainnya,
+    <P>meliputi air baku
+
+   <P> 4. pemukiman, industri, tenaga listrik dan pariwisata. Meningkatkan pengendalian badan
+    <P> sungai terhadap bencana alam banjir dan tanah longsor.
+
+   <p> 5. Meningkatkan kualitas sumber daya manusia dan pemberdayaan masyarakat pengguna 
+    <P>sumber daya air.
+</p>
+
+</div>
+
+<div class="gallery-section">
+    <h2 style="text-align:center;">Galeri Kegiatan</h2>
+
+    <div class="gallery-grid">
+        <div class="card">
+            <h1>Mengelola data pegawai</h1>
+            <img src="/foto/keg1.jpeg">
+            <p>data pegawai di kelola dan dikumpulkan untuk memastikan data tersebut valid atau tidak </p>
+        </div>
+        <div class="card">
+            <h1>Pembersihan irigasi</h1>
+            <img src="/foto/keg2.jpeg">
+            <p>Pembersihan dilakukan untuk menekan adanya resiko bencana banjir</p>
+        </div>
+        <div class="card">
+            <h1>Pengecekan area irigasi</h1>
+            <img src="/foto/keg3.jpeg">
+            <p>Pengecekan dilakukan untuk memantau kondisi irigasi</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
